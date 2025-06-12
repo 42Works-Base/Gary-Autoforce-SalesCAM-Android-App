@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:background="@drawable/login_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_heading"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="normal"
+            android:text="Welcome to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:textSize="@dimen/_24sdp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="normal"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="SalesCAM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:elevation="@dimen/_5sdp"
+        android:padding="@dimen/_10sdp"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="normal"
+            android:text="Please enter your details to login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="@dimen/_8sdp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="normal"
+            android:text="Your unblock code can be found on your Location Admins AutoForce Digital Dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_user"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:hint="@string/enter_email"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@color/colorWhite"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:gravity="start"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <View
+            android:background="@color/colorDividerGrey"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_pass"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp" />
+
+            <EditText
+                android:id="@+id/edt_code"
+                android:hint="@string/enter_code"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:inputType="text"
+                android:gravity="start"
+                android:background="@color/colorWhite"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+
+        <View
+            android:background="@color/colorDividerGrey"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_height="1dp"/>
+
+
+
+
+        <Button
+            android:text="@string/login"
+            android:onClick="checkLoginData"
+            android:textSize="@dimen/_14sdp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/capsule_primary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:textAppearance="@style/MyFontStyle.Button"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+</RelativeLayout>

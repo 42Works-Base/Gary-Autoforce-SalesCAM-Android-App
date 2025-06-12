@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_white_round"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_orientation"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"/>
+
+        <TextView
+            android:text="You cannot record video on portrait mode."
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

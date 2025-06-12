@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:keepScreenOn="true"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@mipmap/bg_light"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_35sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:text="@string/if_you_wish_to_share_a_link2"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="center"
+                android:textColor="@color/colorHintGrey"
+                android:textAppearance="@style/MyFontStyle.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edt_title"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionNext"
+                android:text=""
+                android:gravity="start"
+                android:minHeight="@dimen/_30sdp"
+                android:hint="Enter Video Title"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_11sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edt_desc"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionNext"
+                android:text=""
+                android:gravity="start"
+                android:minHeight="@dimen/_50sdp"
+                android:hint="Enter Video Description"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_11sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_intro"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Video Type"
+                        android:textSize="@dimen/_11sdp"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/MyFontStyle.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="(Please Select)"
+                        android:textSize="@dimen/_11sdp"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/MyFontStyle.Light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/groupVideoType"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rdBtnIntro"
+                        android:text="Intro"
+                        android:checked="true"
+                        android:buttonTint="@color/colorPrimary"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textAppearance="@style/MyFontStyle.Light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rdBtnWalk"
+                        android:text="General"
+                        android:buttonTint="@color/colorPrimary"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textAppearance="@style/MyFontStyle.Light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rdBtnThank"
+                        android:text="Thank You"
+                        android:buttonTint="@color/colorPrimary"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp"
+                        android:textAppearance="@style/MyFontStyle.Light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/rl_custom_intro"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_intro"
+                        android:background="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_below="@+id/spinner_intro"
+                        android:background="@color/colorDividerGrey"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:rotation="-90"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:src="@drawable/ic_arrow_primary"
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_7sdp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/_7sdp"
+                android:hint="Your Name"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp" />
+
+            <EditText
+                android:id="@+id/edt_cname"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/_7sdp"
+                android:hint="Customers First Name"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp" />
+
+<!--            <EditText-->
+<!--                android:id="@+id/edt_year"-->
+<!--                android:layout_marginTop="@dimen/_15sdp"-->
+<!--                android:background="@drawable/bg_white_brdr_grey"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:imeOptions="actionNext"-->
+<!--                android:maxLines="1"-->
+<!--                android:singleLine="true"-->
+<!--                android:paddingLeft="@dimen/_7sdp"-->
+<!--                android:hint="Subject: Walkaround, Thank You, Introduction"-->
+<!--                android:paddingRight="@dimen/_7sdp"-->
+<!--                android:paddingTop="@dimen/_5sdp"-->
+<!--                android:paddingBottom="@dimen/_5sdp"-->
+<!--                android:textColorHint="@color/colorHintGrey"-->
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:textAppearance="@style/MyFontStyle.Light"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/_30sdp" />-->
+
+            <EditText
+                android:id="@+id/edt_year"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionNext"
+                android:text=""
+                android:gravity="start"
+                android:visibility="gone"
+                android:minHeight="@dimen/_50sdp"
+                android:hint="Subject: General, Thank You, Introduction"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionNext"
+                android:text=""
+                android:gravity="start"
+                android:minHeight="@dimen/_50sdp"
+                android:hint="Email (If entering multiple, use a comma after each)"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingRight="@dimen/_7sdp"
+                android:minHeight="@dimen/_30sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    app:ccp_textSize="@dimen/_12sdp"
+                    app:ccp_defaultNameCode="AU"
+                    android:textAppearance="@style/MyFontStyle.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_mobile"
+                    android:inputType="textMultiLine"
+                    android:digits="0123456789,"
+                    android:gravity="start"
+                    android:hint="Enter mobile number/s here. If entering multiple numbers, use a comma after each."
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:minHeight="@dimen/_50sdp"
+                    android:background="@color/colorWhite"
+                    android:includeFontPadding="false"
+                    android:textColorHint="@color/colorHintGrey"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAppearance="@style/MyFontStyle.Light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgToggleReview"
+                    android:src="@drawable/ic_off_with_text"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_30sdp"/>
+
+                <TextView
+                    android:text="Review Request Popup"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textColor="@color/colorBlack"
+                    android:textAppearance="@style/MyFontStyle.Light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:text="Upload"
+                android:textSize="@dimen/_12sdp"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/capsule_primary"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_above="@+id/btn_done"
+                android:textAppearance="@style/MyFontStyle.Button"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/btn_done"
+                android:text="i'm done"
+                android:textSize="@dimen/_12sdp"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_250sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/capsule_white_brdr_primary"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:textAppearance="@style/MyFontStyle.Button"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

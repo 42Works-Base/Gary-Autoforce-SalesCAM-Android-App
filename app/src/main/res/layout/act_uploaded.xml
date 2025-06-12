@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:id="@+id/mainLayout"
+    android:background="@drawable/bg_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearHeading"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:src="@drawable/af_logo"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+        <LinearLayout
+            android:id="@+id/defaultSettingsLayout"
+            android:orientation="vertical"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bg_home"
+            android:layout_below="@+id/linearHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:src="@drawable/ic_thumb_up"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp" />
+
+                    <TextView
+                        android:text="Upload Completed"
+                        android:textSize="@dimen/_14sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/MyFontStyle.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                    <TextView
+                        android:text="Share With Customer (Optional)"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textAppearance="@style/MyFontStyle.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <Button
+                        android:id="@+id/contactButton"
+                        android:text="Select from your contacts"
+                        android:textSize="@dimen/_11sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/capsule_primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:textAppearance="@style/MyFontStyle.Button"
+                        android:textColor="@color/colorWhite" />
+
+                    <EditText
+                        android:id="@+id/edt_cname"
+                        android:background="@drawable/bg_white_brdr_black"
+                        android:imeOptions="actionNext"
+                        android:text=""
+                        android:minHeight="@dimen/_35sdp"
+                        android:hint="Or tap to enter your customers name here"
+                        android:paddingRight="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:textColorHint="@color/colorPopupGrey"
+                        android:textSize="@dimen/_10sdp"
+                        android:textAppearance="@style/MyFontStyle.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        android:background="@drawable/bg_white_brdr_black"
+                        android:imeOptions="actionNext"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text=""
+                        android:minHeight="@dimen/_35sdp"
+                        android:hint="Enter your customers email here"
+                        android:textColorHint="@color/colorPopupGrey"
+                        android:textSize="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:textAppearance="@style/MyFontStyle.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:paddingRight="@dimen/_4sdp"
+                        android:minHeight="@dimen/_30sdp"
+                        android:background="@drawable/bg_white_brdr_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp">
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/ccp"
+                            app:ccp_textSize="@dimen/_10sdp"
+                            app:ccp_defaultPhoneCode="61"
+                            app:ccp_showNameCode="false"
+                            android:gravity="center_vertical"
+                            android:textAppearance="@style/MyFontStyle.Light"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="match_parent" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_mobile"
+                            android:digits="0123456789,"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:hint="Enter your customers mobile here"
+                            android:singleLine="true"
+                            android:background="@color/colorWhite"
+                            android:includeFontPadding="false"
+                            android:paddingRight="@dimen/_3sdp"
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:textColorHint="@color/colorPopupGrey"
+                            android:textSize="@dimen/_9sdp"
+                            android:textAppearance="@style/MyFontStyle.Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:text="Enter Your Details"
+                        android:textSize="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textColor="@color/colorBlack"
+                        android:textAppearance="@style/MyFontStyle.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/edt_name"
+                        android:background="@drawable/bg_white_brdr_black"
+                        android:text=""
+                        android:minHeight="@dimen/_30sdp"
+                        android:paddingRight="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:hint="Enter your name here"
+                        android:textColorHint="@color/colorPopupGrey"
+                        android:textSize="@dimen/_10sdp"
+                        android:textAppearance="@style/MyFontStyle.Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:text="Upload"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/capsule_primary"
+                        android:layout_width="@dimen/_170sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:textAppearance="@style/MyFontStyle.Button"
+                        android:textColor="@color/colorWhite" />
+
+                    <Button
+                        android:id="@+id/btn_done"
+                        android:text="i'm done"
+                        android:textSize="@dimen/_12sdp"
+                        android:textAllCaps="true"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/capsule_white_brdr_primary"
+                        android:layout_width="@dimen/_170sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:textAppearance="@style/MyFontStyle.Button"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/popupLayout"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/emailLayout"
+            android:background="#00000000"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@drawable/bg_popup2"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_15sdp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/email_txt_heading"
+                    android:gravity="center"
+                    android:textSize="@dimen/_19sdp"
+                    android:layout_margin="@dimen/_24sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="normal"
+                    android:text="Your email has successfully sent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@drawable/bg_close"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:id="@+id/email_img_close"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_close_white"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/smsLayout"
+            android:background="#00000000"
+            android:elevation="@dimen/_10sdp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@drawable/bg_popup2"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_15sdp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sms_txt_heading"
+                    android:gravity="center"
+                    android:textSize="@dimen/_19sdp"
+                    android:layout_margin="@dimen/_24sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="normal"
+                    android:text="Your SMS has successfully sent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@drawable/bg_close"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:id="@+id/sms_img_close"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_close_white"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

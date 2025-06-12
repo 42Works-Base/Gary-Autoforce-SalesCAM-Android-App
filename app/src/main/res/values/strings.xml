@@ -1,0 +1,91 @@
+<resources>
+
+    <string name="app_name">SalesCAM</string>
+
+    <!-- FCM Channel ID -->
+
+    <string name="FCMChannel">AutoForceCamApp</string>
+
+    <string name="permanentlyDeniedMessage">Permission denied permanently. Do you wish to go to app settings to activate them?</string>
+    <string name="permissionRequired">Permission is required to access this feature. Do you wish to allow this permission?</string>
+    <string name="permissionsRequired">Permissions are required to access this feature. Do you wish to allow these permissions?</string>
+    <string name="permissionsGranted">Permissions successfully granted.</string>
+
+    <!-- API Error Messages -->
+
+    <string name="new_version_available">New Version Available!</string>
+    <string name="new_version_desc">There is a new version available for download! Please update app by visiting Google Play Store.</string>
+    <string name="error_play_services">This app won\'t run unless you update Google Play Services.</string>
+
+    <string name="api_error_internet">Internet connection lost. Please try again.</string>
+    <string name="api_error">Something went wrong. Please try again.</string>
+    <string name="overlay_error">Error occured. Please try again later.</string>
+    <string name="enter_email">Enter email address</string>
+    <string name="login">Login</string>
+    <string name="enter_code">Enter unlock code</string>
+    <string name="empty_title">Please enter video title.</string>
+    <string name="empty_sch_date">Please select scheduled date.</string>
+    <string name="empty_desc">Please enter video description.</string>
+    <string name="empty_tags">Please enter video tags.</string>
+    <string name="empty_pass">Please enter password.</string>
+
+    <string name="empty_yname">Please enter your name.</string>
+    <string name="empty_cname">Please enter customer name.</string>
+    <string name="empty_model">Please enter year make model.</string>
+    <string name="empty_subject">Please enter video subject.</string>
+
+    <string name="empty_mobile">Please enter mobile number.</string>
+    <string name="empty_msg">Please enter message.</string>
+    <string name="empty_email">Please enter email address.</string>
+    <string name="empty_email2">Please enter email addresses (comma separated).</string>
+    <string name="empty_code">Please enter unlock code.</string>
+    <string name="invalid_email">Please enter valid email address.</string>
+    <string name="how_to_use">How To Use ?</string>
+    <string name="instructions1">Please swipe left or right on the screen to change the branded overlay to the one of your choice</string>
+    <string name="do_not_show_me_again">Do not show me again</string>
+    <string name="instructions2">When recording video, you are able to pause and restart the recording, and delete the last recorded segment, when required. Once you press Stop all recorded segments will be combined, and intros and outros added, ready to preview and then Save.</string>
+    <string name="do_not_show_this_message_again">Do not show this message again</string>
+    <string name="review_message">Review Message</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="tagiscenter">tagIsCenter</string>
+    <string name="valid_date_time">Please select valid date and time.</string>
+    <string name="empty_playlist">Please enter playlist name.</string>
+    <string name="account_error">Account Error</string>
+    <string name="if_you_wish_to_share_a_link">If you wish to share a link via SMS \nand/or Email, please enter the details\nbelow and press UPLOAD or press\nI\'M DONE.</string>
+    <string name="if_you_wish_to_share_a_link2">If you wish to share a link via SMS,\nplease enter the details below and\npress UPLOAD or press I\'M DONE.</string>
+
+    <string name="clarendon">Clarendon</string>
+    <string name="oldman">OldMan</string>
+    <string name="haan">Haan</string>
+    <string name="april">April</string>
+    <string name="mars">Mars</string>
+    <string name="rise">Rise</string>
+    <string name="audrey">Audrey</string>
+    <string name="metropolis">Metropolis</string>
+    <string name="cruz">Cruz</string>
+    <string name="adele">Adele</string>
+    <string name="amazon">Amazon</string>
+    <string name="starlit">Starlit</string>
+    <string name="bluemess">BlueMess</string>
+    <string name="struck">Struck</string>
+    <string name="whisper">Whisper</string>
+    <string name="lime">Lime</string>
+
+
+
+    <string name="crop_image_activity_title"></string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+
+    <string name="pick_image_intent_chooser_title">Select source</string>
+
+    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
+
+
+
+</resources>

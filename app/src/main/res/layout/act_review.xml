@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:keepScreenOn="true"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@mipmap/bg_light"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:paddingLeft="@dimen/_30sdp"
+        android:paddingRight="@dimen/_30sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_sendby"
+                android:src="@mipmap/bg_chat"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp" />
+
+            <TextView
+                android:text="@string/review_message"
+                android:textSize="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/colorPrimary"
+                android:textAppearance="@style/MyFontStyle.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_mobile"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:paddingLeft="@dimen/_7sdp"
+                android:hint=""
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:textColor="@color/colorHintGrey"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:paddingLeft="@dimen/_7sdp"
+                android:hint=""
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:textColor="@color/colorHintGrey"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edt_message"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionDone"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:autoLink="web"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:text="@string/send"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_12sdp"
+                android:onClick="checkDataToSend"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/capsule_primary"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:textAppearance="@style/MyFontStyle.Button"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:text="@string/cancel"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/capsule_white_brdr_primary"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:textAppearance="@style/MyFontStyle.Button"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

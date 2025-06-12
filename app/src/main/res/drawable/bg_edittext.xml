@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list >
+            <item
+                android:bottom="@dimen/_1sdp"
+                android:left="@dimen/_minus2sdp"
+                android:right="@dimen/_minus2sdp"
+                android:top="@dimen/_minus2sdp">
+                <shape android:shape="rectangle" >
+                    <stroke
+                        android:width="@dimen/_1sdp"
+                        android:color="@color/colorDividerGrey" />
+
+                    <solid android:color="#00FFFFFF" />
+
+                    <padding android:left="0dp"
+                        android:right="0dp"
+                        android:top="@dimen/_3sdp"
+                        android:bottom="@dimen/_3sdp" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list >
+            <item
+                android:bottom="@dimen/_1sdp"
+                android:left="@dimen/_minus2sdp"
+                android:right="@dimen/_minus2sdp"
+                android:top="@dimen/_minus2sdp">
+                <shape android:shape="rectangle" >
+                    <stroke
+                        android:width="@dimen/_1sdp"
+                        android:color="@color/colorDividerGrey" />
+
+                    <solid android:color="#00FFFFFF" />
+
+                    <padding android:left="0dp"
+                        android:right="0dp"
+                        android:top="@dimen/_3sdp"
+                        android:bottom="@dimen/_3sdp" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+    <item>
+        <layer-list >
+            <item
+                android:bottom="@dimen/_1sdp"
+                android:left="@dimen/_minus2sdp"
+                android:right="@dimen/_minus2sdp"
+                android:top="@dimen/_minus2sdp">
+                <shape android:shape="rectangle" >
+                    <stroke
+                        android:width="@dimen/_1sdp"
+                        android:color="@color/colorDividerGrey" />
+
+                    <solid android:color="#00FFFFFF" />
+
+                    <padding android:left="0dp"
+                        android:right="0dp"
+                        android:top="@dimen/_3sdp"
+                        android:bottom="@dimen/_3sdp" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+</selector>

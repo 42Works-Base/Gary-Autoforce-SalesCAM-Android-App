@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- No Data View -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/_25sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp">
+
+            <ImageView
+                android:id="@+id/img_nointernet"
+                app:srcCompat="@drawable/ic_no_internet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:text="OOPS!"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_73sdp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:text="Internet connection lost. Please try again."
+            android:gravity="center"
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/colorHintGrey"
+            android:textAppearance="@style/MyFontStyle.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_nointernet_tryagain"
+            android:textSize="@dimen/_10sdp"
+            android:text="Try Again"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_25sdp"
+            android:background="@drawable/capsule_primary"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="@style/MyFontStyle.Button"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp" />
+
+    </LinearLayout>
+
+</LinearLayout>

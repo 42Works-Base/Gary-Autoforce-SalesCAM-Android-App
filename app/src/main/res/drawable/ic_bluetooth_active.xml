@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="288dp"
+    android:height="288dp"
+    android:viewportWidth="288"
+    android:viewportHeight="288">
+  <path
+      android:fillColor="@color/colorBluetooth"
+      android:pathData="M162,223l25,-25 -25,-25v50zM133,144l-45,45c-12,12 5,29 17,17l33,-33v79c0,10 12,17 21,8l53,-53c5,-5 5,-13 0,-18l-45,-45 45,-45c5,-5 5,-13 0,-18l-53,-53c-9,-9 -21,-2 -21,8v79l-33,-33c-12,-12 -29,5 -17,17zM162,65v50l25,-25zM252,144c0,120 -36,144 -102,144S48,264 48,144 86,0 151,0s101,24 101,144z"/>
+</vector>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/bg_white_round"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_heading"
+            android:text="Select Audio Source"
+            android:gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/colorBlack"
+            android:textAppearance="@style/MyFontStyle.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/internal_mic"
+                android:text="Device Microphone"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorPrimary"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/external_mic"
+                android:text="Bluetooth Mic (Please connect through your bluetooth's settings)"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:buttonTint="@color/colorPrimary"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="start"
+                android:paddingTop="@dimen/_3sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/no_mic"
+                android:text="No Mic"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:buttonTint="@color/colorPrimary"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:text="SAVE"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/capsule_primary"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_30sdp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:padding="@dimen/_15sdp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_close_black"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

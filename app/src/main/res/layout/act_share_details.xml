@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@mipmap/bg_light"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_35sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:text="@string/if_you_wish_to_share_a_link"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="center"
+                android:textColor="@color/colorHintGrey"
+                android:textAppearance="@style/MyFontStyle.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:text=""
+                android:gravity="start"
+                android:minHeight="@dimen/_30sdp"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_11sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/_7sdp"
+                android:hint="Your Name"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp" />
+
+            <EditText
+                android:id="@+id/edt_cname"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/_7sdp"
+                android:hint="Customers First Name"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionNext"
+                android:text=""
+                android:gravity="start"
+                android:minHeight="@dimen/_50sdp"
+                android:hint="Email (If entering multiple, use a comma after each)"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:textSize="@dimen/_12sdp"
+                android:textAppearance="@style/MyFontStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingRight="@dimen/_7sdp"
+                android:minHeight="@dimen/_30sdp"
+                android:background="@drawable/bg_white_brdr_grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    app:ccp_textSize="@dimen/_12sdp"
+                    app:ccp_defaultNameCode="AU"
+                    android:textAppearance="@style/MyFontStyle.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_mobile"
+                    android:inputType="textMultiLine"
+                    android:digits="0123456789,"
+                    android:gravity="start"
+                    android:hint="Enter mobile number/s here. If entering multiple numbers, use a comma after each."
+                    android:imeOptions="actionDone"
+                    android:minHeight="@dimen/_50sdp"
+                    android:background="@color/colorWhite"
+                    android:includeFontPadding="false"
+                    android:textColorHint="@color/colorHintGrey"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAppearance="@style/MyFontStyle.Light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:text="Upload"
+                android:textSize="@dimen/_12sdp"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/capsule_primary"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_above="@+id/btn_done"
+                android:textAppearance="@style/MyFontStyle.Button"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/btn_done"
+                android:text="i'm done"
+                android:textSize="@dimen/_12sdp"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_250sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/capsule_white_brdr_primary"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:textAppearance="@style/MyFontStyle.Button"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/bg_white_round"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_heading"
+            android:text=" Please allow ‘Do Not Disturb’ manually so your service videos are not interrupted with calls or text messages."
+            android:gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/colorBlack"
+            android:textAppearance="@style/MyFontStyle.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+        <LinearLayout
+            android:layout_below="@+id/txt_heading"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:text="OK"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_11sdp"
+                android:textAppearance="@style/MyFontStyle.Medium"
+                android:background="@drawable/capsule_primary"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_30sdp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

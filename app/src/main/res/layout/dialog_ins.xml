@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_white_round"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/regoText"
+            android:text="Enter Vehicle Rego No"
+            android:layout_below="@+id/txt_heading"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:textColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:id="@+id/dialogRelativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:padding="@dimen/_2sdp">
+
+            <EditText
+                android:id="@+id/dialogEditText"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColorHint="@color/colorHintGrey"
+                android:hint="Enter rego no here"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_dialog_edittext" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:text="Your video length is over 1 minute. You may be required to keep the app open while the video uploads. You can continue to use the app normally."
+            android:layout_below="@+id/txt_heading"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:textColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_below="@+id/txtMessage"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_11sdp"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/capsule_white_brdr_primary"
+                android:text="Cancel"
+                android:textAppearance="@style/MyFontStyle.Button"
+                android:textColor="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/btnYes"
+                android:text="OK"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_11sdp"
+                android:background="@drawable/capsule_primary"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_30sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

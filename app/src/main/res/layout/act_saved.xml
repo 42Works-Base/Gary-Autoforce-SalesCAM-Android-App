@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:background="@drawable/bg_screen"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearHeading"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:src="@drawable/af_logo"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_15sdp"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bg_home"
+            android:layout_below="@+id/linearHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:src="@drawable/ic_thumb_up"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_110sdp" />
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:text="Photo Saved To Your Camera Roll"
+                    android:textSize="@dimen/_14sdp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:textAppearance="@style/MyFontStyle.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txt_message"
+                    android:text="You can now upload to Facebook then share the link via SMS and/or Email or press I'M DONE to finish."
+                    android:textSize="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/colorHintGrey"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:textAppearance="@style/MyFontStyle.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <Button
+                    android:id="@+id/btn_upload"
+                    android:text="Upload"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:background="@drawable/capsule_primary"
+                    android:layout_width="@dimen/_190sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_above="@+id/btn_done"
+                    android:textAppearance="@style/MyFontStyle.Button"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/btn_done"
+                    android:text="i'm done"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/capsule_white_brdr_primary"
+                    android:layout_width="@dimen/_190sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:textAppearance="@style/MyFontStyle.Button"
+                    android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/progess_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/messagelayout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/bg_popup2">
+
+
+                    <TextView
+                        android:id="@+id/messageText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:text=""
+                        style="@style/MyFontStyle.Medium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"/>
+                </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/closeLayout"
+                        android:background="@drawable/bg_close"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginBottom="-20dp"
+                        android:layout_alignParentRight="true">
+                        <ImageView
+                            android:id="@+id/email_img_close"
+                            android:padding="@dimen/_7sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/close_icon"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/circular_progress"
+                        style="@style/CircularDeterminateProgressBar"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:indeterminateOnly="false"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/circular_progess1"
+                        android:rotation="-90"
+                        tools:progress="60"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/progress_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_20sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/circular_progress"
+                        app:layout_constraintEnd_toEndOf="@+id/circular_progress"
+                        app:layout_constraintStart_toStartOf="@+id/circular_progress"
+                        app:layout_constraintTop_toTopOf="@+id/circular_progress"
+                        tools:text="100" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Photo Uploading"
+                    style="@style/MyFontStyle.Bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_16sdp"/>
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

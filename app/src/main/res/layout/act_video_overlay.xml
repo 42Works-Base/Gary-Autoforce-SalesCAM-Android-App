@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:keepScreenOn="true"
+    android:background="@color/colorBlack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/actionbar"
+            layout="@layout/sublayout_actionbar"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_width="match_parent"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/actionbar"
+            android:background="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_above="@+id/rl_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/ic_swipe"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"/>
+
+                <TextView
+                    android:text="Please swipe left or right on the video preview below to select your branded overlay"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:textAppearance="@style/MyFontStyle.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_preview"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/videoPlayer"
+                    android:focusable="true"
+                    app:use_controller="true"
+                    app:show_timeout="1000"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </com.google.android.exoplayer2.ui.PlayerView>
+
+                <VideoView
+                    android:id="@+id/mVideoView"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <com.autoforcecam.app.CircleRecycler.CircleRecyclerView
+                    android:id="@+id/recycler_overlay"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_progress"
+            android:visibility="gone"
+            android:background="@color/colorBlack"
+            android:layout_below="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp"
+                android:background="@drawable/bg_progress_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.autoforcecam.app.loader.AVLoadingIndicatorView
+                    app:indicatorName="BallSpinFadeLoaderIndicator"
+                    app:indicatorColor="@color/colorPrimary"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp" />
+
+                <TextView
+                    android:id="@+id/txt_message"
+                    android:text=""
+                    android:maxWidth="@dimen/_150sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+                    android:textAppearance="@style/MyFontStyle.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progess_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack"
+        android:padding="20dp">
+
+
+        <ProgressBar
+            android:id="@+id/circular_progress"
+            style="@style/CircularDeterminateProgressBar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:indeterminateOnly="false"
+            android:progress="0"
+            android:progressDrawable="@drawable/circular_progess"
+            android:rotation="-90"
+            tools:progress="60"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/progress_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/circular_progress"
+            app:layout_constraintEnd_toEndOf="@+id/circular_progress"
+            app:layout_constraintStart_toStartOf="@+id/circular_progress"
+            app:layout_constraintTop_toTopOf="@+id/circular_progress"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintBottom_toTopOf="@+id/circular_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Video Merging Now In Process" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
